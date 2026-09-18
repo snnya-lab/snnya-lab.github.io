@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang ="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1</title>
+</head>
+<body>
+
+    <h1>Список гиперссылок</h1>
+    <ul>
+        <li>1.<a href="http://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+        <li>2.<a href="https://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru в протоколе https</a></li>
+        <li>3.<a href="https://kubsu.ru"><img src="image.jpg" alt="Цветок" width = "300"></a></li>
+        <li>4.<a href="page.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+        <li>5.<a href="index.html">Сокращенная ссылка на главную страницу</a></li>
+        <li>6.<a href="#my-form">Ссылка на фрагмент текущей страницы</a></li>
+        <li>7.<a href="site.com?a=1&b=2&c=3">Ссылка с тремя параметрами</a></li>
+        <li>8.<a href="site.com?id=5">Ссылка с параметром ID</a></li>
+        <li>9.<a href="file.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+        <li>10.<a href="about/file.html">Относительная ссылка на страницу в каталоге about</a></li>
+        <li>11.<a href="../file.html">Относительная страница уровнем выше текущей</a></li>
+        <li>12.<a href="../../file.html">Относительная страница на два уровня выше текущей</a></li>
+        <li>13.Какой-то текст... <a href="site.com">контекстная ссылка</a>.</li>
+        <li>14.<a href="site.com#history">Ссылка на фрагмент чужого сайта</a></li>
+        <li>
+            15.
+
+            <img src="image.jpg" usemap="#nav" width = "400" alt = "Цветок">
+            <map name="nav">
+                <area shape="rect" coords="0,0,100,100" href="1.html" alt = "Квадрат">
+                <area shape="circle" coords="200,150,50" href="2.html" alt = "Круг">
+            </map>
+        </li>
+        <li>16.<a href="">Пустой href</a></li>
+        <li>17.<a>Без href</a></li>
+        <li>18.<a href="site.com" rel="nofollow">Запрещено для поисковиков</a></li>
+        <li>19.<a href="site.com" rel="nofollow">Запрещена индексация поисковиками</a></li>
+        <li>
+            20. Список с подсказками:
+            <ol>
+                <li><a href="1.html" title="Click">Ссылка 1</a></li>
+                <li><a href="2.html" title="Click">Ссылка 2</a></li>
+            </ol>
+        </li>
+        <li>21.<a href="ftp://ftp.com/file.zip">FTP ссылка</a></li>
+    </ul>
+
+    <h2 id="my-form">Форма регистрации</h2>
+    <form action="#" method="POST">
+        <label>1. ФИО: <input type="text" name="fio"></label><br><br>
+
+        <label>2. Телефон: <input type="tel" name="phone"></label><br><br>
+
+        <label>3. E-mail: <input type="email" name="email"></label><br><br>
+
+        <label>4. Дата рождения: <input type="date" name="dob"></label><br><br>
+
+        
+        <p>5. Пол:</p>
+        <label><input type="radio" name="gender" value="m"> Мужской</label>
+        <label><input type="radio" name="gender" value="f"> Женский</label><br><br>
+        
+
+        
+        <label>6. Любимый язык программирования: <br>
+
+        <select name="langs" multiple>
+            <option value="c">C++</option>
+            <option value="py">Python</option>
+            <option value="Pascal">Pascal</option>
+            <option value="C">C</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="PHP">PHP</option>
+            <option value="Java">Java</option>
+            <option value="Haskel">Haskel</option>
+            <option value="Clojure">Clojure</option>
+            <option value="Prolog">Prolog</option>
+            <option value="Scala">Scala</option>
+        </select>
+        </label><br><br>
+
+
+        <label>7. О себе: <textarea name="bio"></textarea></label><br><br>
+
+        
+        <label>8. <input type="checkbox" name="agree"> Согласен с правилами </label><br><br>
+
+        
+        9. <input type="submit" value="Отправить"><br><br>
+    </form>
+
+</body>
+</html>
