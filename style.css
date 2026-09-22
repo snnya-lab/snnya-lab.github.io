@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.header-full {
+    width: 100%;
+    background-color: #7f868b;
+    padding: 20px 0;
+    position: relative;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto; 
+    position: relative; 
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.site-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.top-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.main-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.content-block {
+    background-color: #7f868b;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #666c70;
+}
+
+.content-block h2 {
+    margin-top: 0;
+}
+
+.table-container {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table th, 
+.custom-table td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f2f5f8;
+}
+
+.custom-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.footer-full {
+    width: 100%;
+    background-color: #7f868b;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-container p {
+    margin: 0;
+}

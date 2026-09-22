@@ -1,93 +1,195 @@
 <!DOCTYPE html>
-<html lang ="ru">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Задание 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Список гиперссылок</h1>
-    <ul>
-        <li>1.<a href="http://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
-        <li>2.<a href="https://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru в протоколе https</a></li>
-        <li>3.<a href="https://kubsu.ru"><img src="image.jpg" alt="Цветок" width = "300"></a></li>
-        <li>4.<a href="page.html">Сокращенная ссылка на внутреннюю страницу</a></li>
-        <li>5.<a href="index.html">Сокращенная ссылка на главную страницу</a></li>
-        <li>6.<a href="#my-form">Ссылка на фрагмент текущей страницы</a></li>
-        <li>7.<a href="site.com?a=1&b=2&c=3">Ссылка с тремя параметрами</a></li>
-        <li>8.<a href="site.com?id=5">Ссылка с параметром ID</a></li>
-        <li>9.<a href="file.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-        <li>10.<a href="about/file.html">Относительная ссылка на страницу в каталоге about</a></li>
-        <li>11.<a href="../file.html">Относительная страница уровнем выше текущей</a></li>
-        <li>12.<a href="../../file.html">Относительная страница на два уровня выше текущей</a></li>
-        <li>13.Какой-то текст... <a href="site.com">контекстная ссылка</a>.</li>
-        <li>14.<a href="site.com#history">Ссылка на фрагмент чужого сайта</a></li>
-        <li>
-            15.
+    <header class="header-full">
+        <div class="container header-container">
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="#links">Ссылка меню 1</a></li>
+                    <li><a href="#table">Ссылка 2</a></li>
+                    <li><a href="#form">Ссылка 3</a></li>
+                </ul>
+            </nav>
 
-            <img src="image.jpg" usemap="#nav" width = "300" alt = "Цветок">
-            <map name="nav">
-                <area shape="rect" coords="0,0,90,90" href="1.html" alt = "Квадрат">
-                <area shape="circle" coords="150,100,25" href="2.html" alt = "Круг">
-            </map>
-        </li>
-        <li>16.<a href="">Пустой href</a></li>
-        <li>17.<a>Без href</a></li>
-        <li>18.<a href="site.com" rel="nofollow">Запрещено для поисковиков</a></li>
-        <li>19.<a href="site.com" rel="nofollow">Запрещена индексация поисковиками</a></li>
-        <li>
-            20. Список с подсказками:
-            <ol>
-                <li><a href="1.html" title="Click">Ссылка 1</a></li>
-                <li><a href="2.html" title="Click">Ссылка 2</a></li>
-            </ol>
-        </li>
-        <li>21.<a href="ftp://ftp.com/file.zip">FTP ссылка</a></li>
-    </ul>
-
-    <h2 id="my-form">Форма регистрации</h2>
-    <form action="#" method="POST">
-        <label>1. ФИО: <input type="text" name="fio"></label><br><br>
-
-        <label>2. Телефон: <input type="tel" name="phone"></label><br><br>
-
-        <label>3. E-mail: <input type="email" name="email"></label><br><br>
-
-        <label>4. Дата рождения: <input type="date" name="dob"></label><br><br>
-
-        
-        <p>5. Пол:</p>
-        <label><input type="radio" name="gender" value="m"> Мужской</label>
-        <label><input type="radio" name="gender" value="f"> Женский</label><br><br>
-        
-
-        
-        <label>6. Любимый язык программирования: <br>
-
-        <select name="langs" multiple>
-            <option value="c">C++</option>
-            <option value="py">Python</option>
-            <option value="Pascal">Pascal</option>
-            <option value="C">C</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="PHP">PHP</option>
-            <option value="Java">Java</option>
-            <option value="Haskel">Haskel</option>
-            <option value="Clojure">Clojure</option>
-            <option value="Prolog">Prolog</option>
-            <option value="Scala">Scala</option>
-        </select>
-        </label><br><br>
+            <div class="branding">
+    <div class="logo-circle">
+        <img src="image2.png" alt="Логотип">
+    </div>
+    <div class="site-title">Мой сайт</div>
+</div>
+        </div>
+    </header>
 
 
-        <label>7. О себе: <textarea name="bio"></textarea></label><br><br>
+    <main class="container main-content">
 
-        
-        <label>8. <input type="checkbox" name="agree"> Согласен с правилами </label><br><br>
+        <section id="links" class="content-block">
+            <h2>Список гиперссылок</h2>
+            <ul>
+                <li>1. <a href="http://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+                <li>2. <a href="https://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru в протоколе https</a></li>
+                <li>3. <a href="https://kubsu.ru"><img src="image.jpg" alt="Цветок" width="300"></a></li>
+                <li>4. <a href="page.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+                <li>5. <a href="index.html">Сокращенная ссылка на главную страницу</a></li>
+                <li>6. <a href="#form">Ссылка на фрагмент текущей страницы</a></li>
+                <li>7. <a href="https://site.com?a=1&amp;b=2&amp;c=3">Ссылка с тремя параметрами</a></li>
+                <li>8. <a href="https://site.com?id=5">Ссылка с параметром ID</a></li>
+                <li>9. <a href="file.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+                <li>10. <a href="about/file.html">Относительная ссылка на страницу в каталоге about</a></li>
+                <li>11. <a href="../file.html">Относительная страница уровнем выше текущей</a></li>
+                <li>12. <a href="../../file.html">Относительная страница на два уровня выше текущей</a></li>
+                <li>13. Какой-то текст... <a href="https://site.com">контекстная ссылка</a>.</li>
+                <li>14. <a href="https://site.com#history">Ссылка на фрагмент чужого сайта</a></li>
+                <li>
+                    15.
+                    <img src="image.jpg" usemap="#nav" width="300" alt="Цветок">
+                    <map name="nav">
+                        <area shape="rect" coords="0,0,90,90" href="1.html" alt="Квадрат">
+                        <area shape="circle" coords="150,100,25" href="2.html" alt="Круг">
+                    </map>
+                </li>
+                <li>16. <a href="">Пустой href</a></li>
+                <li>17. <a>Без href</a></li>
+                <li>18. <a href="https://site.com" rel="nofollow">Запрещено для поисковиков</a></li>
+                <li>19. <a href="https://site.com" rel="nofollow">Запрещена индексация поисковиками</a></li>
+                <li>
+                    20. Список с подсказками:
+                    <ol>
+                        <li><a href="1.html" title="Click">Ссылка 1</a></li>
+                        <li><a href="2.html" title="Click">Ссылка 2</a></li>
+                    </ol>
+                </li>
+                <li>21. <a href="ftp://ftp.com/file.zip">FTP ссылка</a></li>
+            </ul>
+        </section>
 
-        
-        9. <input type="submit" value="Отправить"><br><br>
-    </form>
+        <!-- 2. Таблица -->
+        <section id="table" class="content-block">
+            <h2>Таблица</h2>
+            <div class="table-container">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Категория</th>
+                            <th>Параметр</th>
+                            <th>Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td rowspan="2">Свойства макета</td>
+                            <td>Максимальная ширина</td>
+                            <td>960px</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Центрирование</td>
+                            <td>margin: 0 auto</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Спецификация</td>
+                            <td colspan="2">HTML5 / CSS3 (Объединенная ячейка)</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td rowspan="2">Стилизация</td>
+                            <td>Четные строки</td>
+                            <td>#f2f5f8</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Нечетные строки</td>
+                            <td>#ffffff</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Валидация</td>
+                            <td>W3C Validator</td>
+                            <td>Без ошибок</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="form" class="content-block">
+            <h2>Форма</h2>
+            <form action="#" method="POST" class="user-form">
+                <div class="form-row">
+                    <label for="fio">1. ФИО:</label>
+                    <input type="text" id="fio" name="fio">
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">2. Телефон:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-row">
+                    <label for="email">3. E-mail:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-row">
+                    <label for="dob">4. Дата рождения:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+
+                <fieldset class="form-row">
+                    <legend>5. Пол:</legend>
+                    <label class="radio-label"><input type="radio" name="gender" value="m"> Мужской</label>
+                    <label class="radio-label"><input type="radio" name="gender" value="f"> Женский</label>
+                </fieldset>
+
+                <div class="form-row">
+                    <label for="langs">6. Любимый язык программирования:</label>
+                    <select id="langs" name="langs" multiple size="6">
+                        <option value="c">C++</option>
+                        <option value="py">Python</option>
+                        <option value="Pascal">Pascal</option>
+                        <option value="C">C</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Java">Java</option>
+                        <option value="Haskel">Haskel</option>
+                        <option value="Clojure">Clojure</option>
+                        <option value="Prolog">Prolog</option>
+                        <option value="Scala">Scala</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="bio">7. О себе:</label>
+                    <textarea id="bio" name="bio" rows="4"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label class="checkbox-label"><input type="checkbox" name="agree"> 8. Согласен с правилами</label>
+                </div>
+
+                <div class="form-row">
+                    <input type="submit" value="Отправить" class="btn-submit">
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer-full">
+        <div class="container footer-container">
+            <p>(c) Абабков Арсений</p>
+        </div>
+    </footer>
 
 </body>
 </html>
