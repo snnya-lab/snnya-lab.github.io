@@ -8,26 +8,6 @@
 </head>
 <body>
 
-    <header class="header-full">
-        <div class="container header-container">
-            <nav class="top-nav">
-                <ul>
-                    <li><a href="#links">Ссылка меню 1</a></li>
-                    <li><a href="#table">Ссылка 2</a></li>
-                    <li><a href="#form">Ссылка 3</a></li>
-                </ul>
-            </nav>
-
-            <div class="branding">
-    <div class="logo-circle">
-        <img src="image2.png" alt="Логотип">
-    </div>
-    <h1 class="site-title">Название сайта</h1>
-</div>
-        </div>
-    </header>
-
-
     <main class="container main-content">
 
         <section id="links" class="content-block">
@@ -36,91 +16,42 @@
                 <li>1. <a href="http://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
                 <li>2. <a href="https://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru в протоколе https</a></li>
                 <li>3. <a href="https://kubsu.ru"><img src="image.jpg" alt="Цветок" width="300"></a></li>
-                <li>4. <a href="page.html">Сокращенная ссылка на внутреннюю страницу</a></li>
-                <li>5. <a href="index.html">Сокращенная ссылка на главную страницу</a></li>
-                <li>6. <a href="#form">Ссылка на фрагмент текущей страницы</a></li>
-                <li>7. <a href="https://site.com?a=1&amp;b=2&amp;c=3">Ссылка с тремя параметрами</a></li>
-                <li>8. <a href="https://site.com?id=5">Ссылка с параметром ID</a></li>
-                <li>9. <a href="file.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-                <li>10. <a href="about/file.html">Относительная ссылка на страницу в каталоге about</a></li>
-                <li>11. <a href="../file.html">Относительная страница уровнем выше текущей</a></li>
-                <li>12. <a href="../../file.html">Относительная страница на два уровня выше текущей</a></li>
+                <li>4. <a href="/internal">Сокращенная ссылка на внутреннюю страницу</a></li>
+                <li>5. <a href="/">Сокращенная ссылка на главную страницу</a></li>
+                <li>6. <a href="#form-section">Ссылка на фрагмент текущей страницы</a></li>
+                <li>7. <a href="https://example.com/?param1=1&param2=2&param3=3">Ссылка с тремя параметрами</a></li>
+                <li>8. <a href="https://example.com/?id=42">Ссылка с параметром ID</a></li>
+                <li>9. <a href="./page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+                <li>10. <a href="about/page.html">Относительная ссылка на страницу в каталоге about</a></li>
+                <li>11. <a href="../page.html">Относительная страница уровнем выше текущей</a></li>
+                <li>12. <a href="../../page.html">Относительная страница на два уровня выше текущей</a></li>
                 <li>13. Какой-то текст... <a href="https://site.com">контекстная ссылка</a>.</li>
-                <li>14. <a href="https://site.com#history">Ссылка на фрагмент чужого сайта</a></li>
-                <li>
-                    15.
-                    <img src="image.jpg" usemap="#nav" width="300" alt="Цветок">
-                    <map name="nav">
-                        <area shape="rect" coords="0,0,90,90" href="1.html" alt="Квадрат">
-                        <area shape="circle" coords="150,100,25" href="2.html" alt="Круг">
+                <li>14. <a href="https://example.com/#section-name">Ссылка на фрагмент чужого сайта</a></li>
+                <li>15. Ссылки из прямоугольных и круглых областей картинки:
+                    <br>
+                    <img src="image.jpg" alt="Карта" usemap="#imagemap" width="200">
+                    <map name="imagemap">
+                        <area shape="rect" coords="0,0,100,100" href="https://example.com/rect"
+                            alt="Прямоугольная область">
+                        <area shape="circle" coords="150,150,50" href="https://example.com/circle"
+                            alt="Круглая область">
                     </map>
                 </li>
                 <li>16. <a href="">Пустой href</a></li>
                 <li>17. <a>Без href</a></li>
-                <li>18. <a href="https://site.com" rel="nofollow">Запрещено для поисковиков</a></li>
-                <li>19. <a href="https://site.com" rel="nofollow">Запрещена индексация поисковиками</a></li>
-                <li>
-                    20. Список с подсказками:
+                <li>18. <a href="https://example.com/" rel="nofollow">Запрещен переход поисковикам</a></li>
+                <li>19. <!--noindex--><a href="https://example.com/">Запрещенная для индексации
+                        поисковиками</a><!--/noindex--></li>
+                <li>20. Нумерованный список ссылок с подписями title:
                     <ol>
-                        <li><a href="1.html" title="Click">Ссылка 1</a></li>
-                        <li><a href="2.html" title="Click">Ссылка 2</a></li>
+                        <li><a href="https://example.com/1" title="Первая ссылка">Ссылка один</a></li>
+                        <li><a href="https://example.com/2" title="Вторая ссылка">Ссылка два</a></li>
                     </ol>
                 </li>
-                <li>21. <a href="ftp://ftp.com/file.zip">FTP ссылка</a></li>
+                <li>21. <a href="ftp://example.com/file.zip">Ссылка на файл на сервере FTP с авторизацией</a></li>
             </ul>
         </section>
 
-        <!-- 2. Таблица -->
-        <section id="table" class="content-block">
-            <h2>Таблица</h2>
-            <div class="table-container">
-                <table class="custom-table">
-                    <thead>
-                        <tr>
-                            <th>№</th>
-                            <th>Категория</th>
-                            <th>Параметр</th>
-                            <th>Значение</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td rowspan="2">Свойства макета</td>
-                            <td>Максимальная ширина</td>
-                            <td>960px</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Центрирование</td>
-                            <td>margin: 0 auto</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Спецификация</td>
-                            <td colspan="2">HTML5 / CSS3 (Объединенная ячейка)</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td rowspan="2">Стилизация</td>
-                            <td>Четные строки</td>
-                            <td>#f2f5f8</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Нечетные строки</td>
-                            <td>#ffffff</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Валидация</td>
-                            <td>W3C Validator</td>
-                            <td>Без ошибок</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
 
         <section id="form" class="content-block">
             <h2>Форма</h2>
