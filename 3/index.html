@@ -10,36 +10,35 @@
 
     <header class="header-full">
         <div class="container header-container">
+            <div class="branding">
+                <div class="logo-circle">
+                    <img src="image2.png" alt="Логотип">
+                </div>
+                <h1 class="site-title">Сайт для крутых</h1>
+            </div>
+
             <nav class="top-nav">
                 <ul>
-                    <li><a href="#links">Ссылка меню 1</a></li>
-                    <li><a href="#table">Ссылка 2</a></li>
-                    <li><a href="#form">Ссылка 3</a></li>
+                    <li><a href="#links">Ссылка на меню</a></li>
+                    <li><a href="#table">Ссылка на таблицу</a></li>
+                    <li><a href="#form-section">Ссылка на форму</a></li>
                 </ul>
             </nav>
-
-            <div class="branding">
-    <div class="logo-circle">
-        <img src="image2.png" alt="Логотип">
-    </div>
-    <h1 class="site-title">Название сайта</h1>
-</div>
         </div>
     </header>
 
-
     <main class="container main-content">
 
-        <section id="links-section" class="content-block order-links">
+        <section id="links" class="content-block">
             <h2>Список гиперссылок</h2>
             <ul>
                 <li>1. <a href="http://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
                 <li>2. <a href="https://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru в протоколе https</a></li>
                 <li>3. <a href="https://kubsu.ru"><img src="image.jpg" alt="Цветок" width="300"></a></li>
                 <li>4. <a href="/internal">Сокращенная ссылка на внутреннюю страницу</a></li>
-                <li>5. <a href="/">Сокращенная ссылка на главную страницу</a></li>
+                <li>5. <a href="/internal">Сокращенная ссылка на главную страницу</a></li>
                 <li>6. <a href="#form-section">Ссылка на фрагмент текущей страницы</a></li>
-                <li>7. <a href="https://example.com/?param1=1&param2=2&param3=3">Ссылка с тремя параметрами</a></li>
+                <li>7. <a href="https://example.com/?param1=1&amp;param2=2&amp;param3=3">Ссылка с тремя параметрами</a></li>
                 <li>8. <a href="https://example.com/?id=42">Ссылка с параметром ID</a></li>
                 <li>9. <a href="./page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
                 <li>10. <a href="about/page.html">Относительная ссылка на страницу в каталоге about</a></li>
@@ -51,17 +50,14 @@
                     <br>
                     <img src="image.jpg" alt="Карта" usemap="#imagemap" width="200">
                     <map name="imagemap">
-                        <area shape="rect" coords="0,0,100,100" href="https://example.com/rect"
-                            alt="Прямоугольная область">
-                        <area shape="circle" coords="150,150,50" href="https://example.com/circle"
-                            alt="Круглая область">
+                        <area shape="rect" coords="0,0,100,100" href="https://example.com/rect" alt="Прямоугольная область">
+                        <area shape="circle" coords="150,150,50" href="https://example.com/circle" alt="Круглая область">
                     </map>
                 </li>
                 <li>16. <a href="">Пустой href</a></li>
                 <li>17. <a>Без href</a></li>
                 <li>18. <a href="https://example.com/" rel="nofollow">Запрещен переход поисковикам</a></li>
-                <li>19. <!--noindex--><a href="https://example.com/">Запрещенная для индексации
-                        поисковиками</a><!--/noindex--></li>
+                <li>19. <!--noindex--><a href="https://example.com/">Запрещенная для индексации поисковиками</a><!--/noindex--></li>
                 <li>20. Нумерованный список ссылок с подписями title:
                     <ol>
                         <li><a href="https://example.com/1" title="Первая ссылка">Ссылка один</a></li>
@@ -72,7 +68,7 @@
             </ul>
         </section>
 
-        <section id="table-section" class="content-block order-table">
+        <section id="table" class="content-block">
             <h2>Таблица</h2>
             <div class="table-container">
                 <table class="custom-table">
@@ -123,12 +119,13 @@
             </div>
         </section>
 
-        <section id="form-section" class="content-block order-form">
-            <h1 id="form-title">Форма регистрации</h1>
+        <!-- 3. Форма -->
+        <section id="form-section" class="content-block">
+            <h2 id="form-title">Форма регистрации</h2>
             <form action="#" method="GET" class="registration-form">
                 <label>1. ФИО:
                     <input type="text" name="fio" required
-                        pattern="^[A-ZА-ЯЁ][a-zа-яё]+(-[A-ZА-ЯЁ][a-zа-яё]+)?(\s+[A-ZА-ЯЁ][a-zа-яё]+(-[A-ZА-ЯЁ][a-zа-яё]+)?){1,2}$"
+                        pattern="[A-ZА-ЯЁ][a-zа-яё]+(-[A-ZА-ЯЁ][a-zа-яё]+)?(\s+[A-ZА-ЯЁ][a-zа-яё]+(-[A-ZА-ЯЁ][a-zа-яё]+)?){1,2}"
                         placeholder="Иванов Иван Иванович"
                         title="ФИО должно начинаться с заглавной буквы, содержать только буквы и состоять минимум из фамилии и имени">
                 </label><br><br>
